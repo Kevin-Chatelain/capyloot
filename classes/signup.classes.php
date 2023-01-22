@@ -12,7 +12,8 @@ class Signup extends Dbh {
             return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
         }
 
-        $hashedPwd = crypt($pwd);
+	
+	    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
         $uuid = get_guid();
 
         if(!$stmt->execute(array($username, $email, $hashedPwd, $uuid))) {
@@ -23,11 +24,15 @@ class Signup extends Dbh {
 
         $stmt = null;
 
+        session_start();
+        $_SESSION["user_id"] = $uuid;
+        $_SESSION["username"] = $username;
+
 
     }
 
     protected function checkUser($username, $email) {
-        $stmt = $this->connect()->prepare('SELECT username FROM users WHERE username = ? OR email =?;');
+        $stmt = $this->connect()->prepare('SELECT username FROM users WHERE username = ? OR email = ?;');
 
         if(!$stmt->execute(array($username, $email))) {
             $stmt = null;

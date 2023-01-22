@@ -41,6 +41,8 @@ class SignupContr extends Signup {
         }
 
         $this->setUser($this->username, $this->pwd, $this->email);
+
+        
     }
 
     private function emptyInput() {

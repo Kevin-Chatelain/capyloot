@@ -26,6 +26,16 @@ session_start();
             <a href="../../includes/logout.inc.php">Déconnexion</a>
         </div>
     </header>
+
+    <?php 
+
+        include "../../classes/dbh.classes.php";
+        include "../../classes/print-capybara.classes.php";
+
+        $capyData = new printCapybara($_SESSION["user_id"]);
+        $capyData->print_user_capybaras();     
+        
+    ?>
     
 </body>
 </html>

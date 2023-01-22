@@ -32,27 +32,23 @@ session_start();
     <div class="content-container">
 
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <input type="submit" name="loot-btn" value="Loot a Capybara">
             <input type="text" name="result-name" class="result-name">
             <input type="text" name="result-rarity" class="result-rarity">
             <p class="result-stars"></p>
+
+            <input type="submit" name="loot-btn" class="loot-btn" value="Loot a Capybara">
         </div>
     </div>
     
 
     <script src="../js/loot.js"></script>
 
-    <?php 
-
-        if(isset($_POST['loot-btn'])) {
-            echo '<script type="text/javascript"> loot(); </script>';
-
-            $name = $_POST['result-name'];
-            $rarity = $_POST['result-rarity'];
-
-        }
-
-    ?>
+    <script>
+        document.querySelector('.loot-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            loot();
+        });
+    </script>
     
 </body>
 </html>
