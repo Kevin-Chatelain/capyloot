@@ -3,27 +3,33 @@
         {
             "legendary": [
                 {
-                    "name": "Slaying Capy"
+                    "name": "Slaying Capy",
+                    "image": "slaying-capy"
+                    
                 }
             ],
             "superrare": [
                 {
-                    "name": "Pulling up Capy"
+                    "name": "Pulling up Capy",
+                    "image": "pulling-up-capy"
                 }
             ],
             "rare": [
                 {
-                    "name": "Tank Capy"
+                    "name": "Tank Capy",
+                    "image": "tank-capy"
                 }
             ],
             "uncommon": [
                 {
-                    "name": "Diving Capy"
+                    "name": "Diving Capy",
+                    "image": "diving-capy"
                 }
             ],
             "common": [
                 {
-                    "name": "Normal Capy"
+                    "name": "Normal Capy",
+                    "image": "normal-capy"
                 }
             ]
         }

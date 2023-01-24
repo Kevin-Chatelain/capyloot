@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+h1 {
+  font-family: "Unbounded", cursive;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Unbounded", cursive;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "Unbounded", cursive;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "Unbounded", cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+
+::-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+input[type=text], ::placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  background-image: url("../img/capy-index-bg.png");
+  background-size: cover;
+  background-position: 100% 100%;
+}
+body .global-container .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #dfd9ce;
+  padding: 25px 40px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  border-right: 5px solid #85756E;
+  border-bottom: 5px solid #85756E;
+}
+body .global-container .container h1 {
+  text-align: center;
+}
+body .global-container .container form {
+  margin-top: 15px;
+}
+body .global-container .container form input {
+  display: block;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+body .global-container .container form button {
+  background-color: #85756E;
+  color: #f3f3f3;
+  font-weight: 400;
+  font-family: "Unbounded", cursive;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+}/*# sourceMappingURL=index.css.map */

@@ -15,15 +15,18 @@ class printCapybara extends Dbh {
             $stmt = null;
             exit();
         }
-
-        echo '<pre>';
+        
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        foreach($result as $value) {
-            echo $value["name"], "<br>", $value["rank"];
-            echo "<br>", "<br>";
 
-         
+        foreach($result as $value) {
+            echo "<div class='looted-card'> <div class='card-image'><img src='../img/".$value["image"].".webp' height=500 width=500></div> <div class='card-infos'> <h3>".$value["name"]."</h3> <h4>".$value["rank"]."</h4></div></div>";
         }
+
+        
+
+
+
+        
     }
 }
 

@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+h1 {
+  font-family: "Unbounded", cursive;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Unbounded", cursive;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "Unbounded", cursive;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "Unbounded", cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+
+::-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+input[type=text], ::placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+body header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 50px;
+  align-items: center;
+}
+body header .logo {
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+body header .menu ul {
+  list-style: none;
+  display: flex;
+}
+body header .menu ul .current-page {
+  position: relative;
+}
+body header .menu ul .current-page::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #85756E;
+  position: absolute;
+  top: -50%;
+  left: -5%;
+  border-radius: 50%;
+  opacity: 0.45;
+  z-index: 1;
+}
+body header .menu ul li {
+  margin: 0 15px;
+}
+body header .menu ul li a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 5px;
+  font-family: "Unbounded", cursive;
+  position: relative;
+  z-index: 5;
+  text-transform: uppercase;
+}
+body header .actions {
+  display: flex;
+  align-items: center;
+}
+body header .actions a {
+  text-decoration: none;
+  margin-left: 20px;
+  background-color: #85756E;
+  color: #f3f3f3;
+  font-weight: 400;
+  font-family: "Unbounded", cursive;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 3px;
+}
+body main {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .left {
+  width: 50%;
+}
+body main .left h1 span {
+  color: #85756E;
+  font-family: "Unbounded", cursive;
+}
+body main .left p {
+  margin-top: 10px;
+}
+body main .left a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #f3f3f3;
+  font-weight: 400;
+  font-family: "Unbounded", cursive;
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #85756E;
+  align-items: center;
+  margin-top: 10px;
+}
+body main .left a svg {
+  stroke: #85756E;
+  margin-left: 5px;
+}
+body main .right {
+  width: 50%;
+}
+body main .right .news-container {
+  margin-top: 30px;
+  overflow: auto;
+}
+body main .right .news-container .news h3 {
+  color: #85756E;
+  margin-bottom: 10px;
+}
+body main .right .news-container .news h4 {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10px;
+}
+body main .right .news-container .news p {
+  width: 50%;
+  font-weight: 400;
+}
+body .content-container {
+  width: 80%;
+  text-align: center;
+}
+body .content-container form input[type=text] {
+  border: none;
+  pointer-events: none;
+  display: block;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 5px auto;
+}
+body .content-container form input[name=result-name] {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+body .content-container form input[name=result-rarity] {
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+body .profil {
+  flex-direction: column;
+}
+body .profil .loot-container {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: 50px;
+}
+body .profil .loot-container .looted-card {
+  background-color: #dfd9ce;
+  width: 100%;
+  border-right: 5px solid #85756E;
+  border-bottom: 5px solid #85756E;
+  border-radius: 15px;
+  overflow: hidden;
+}
+body .profil .loot-container .looted-card .card-image {
+  width: 100%;
+}
+body .profil .loot-container .looted-card .card-image img {
+  max-width: 100%;
+  height: auto;
+}
+body .profil .loot-container .looted-card .card-infos {
+  padding: 12px 18px;
+}
+body .profil .loot-container .looted-card .card-infos h4 {
+  color: #85756E;
+}
+
+.accueil {
+  background-image: url("../img/accueil-bg.png");
+  background-size: cover;
+  background-position: 100% 100%;
+}/*# sourceMappingURL=dashboard.css.map */

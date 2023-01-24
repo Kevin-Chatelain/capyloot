@@ -8,21 +8,20 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/dashboard.css">
     <title>Capy Looting</title>
 </head>
 <body>
     <header>
-        <div class="logo">Capybara Looting</div>
+    <h3 class="logo">Crazy Looting</h3>
         <nav class="menu">
             <ul>
                 <li><a href="dashboard.php">Accueil</a></li>
-                <li><a href="invocation.php">Invocations</a></li>
+                <li class="current-page"><a href="invocation.php">Invocations</a></li>
                 <li><a href="profil.php">Profil</a></li>
             </ul>
         </nav>
         <div class="actions">
-            <p><?php echo $_SESSION["username"]; ?></p>
             <a href="../../includes/logout.inc.php">Déconnexion</a>
         </div>
     </header>
@@ -34,6 +33,7 @@ session_start();
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <input type="text" name="result-name" class="result-name">
             <input type="text" name="result-rarity" class="result-rarity">
+            <input type="text" name="result-image" class="result-image">
             <p class="result-stars"></p>
 
             <input type="submit" name="loot-btn" class="loot-btn" value="Loot a Capybara">

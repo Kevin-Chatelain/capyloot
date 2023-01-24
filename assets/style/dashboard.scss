@@ -1,0 +1,221 @@
+@import './properties.scss';
+
+body {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    min-height: 100vh;
+
+    header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px 50px;
+        align-items: center;
+
+        .logo {
+            text-transform: uppercase;
+            font-size: 1.3em;
+        }
+
+        .menu {
+
+            ul {
+                list-style: none;
+                display: flex;
+
+                .current-page {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        width: 30px;
+                        height: 30px;
+                        background-color: $brun;
+                        position: absolute;
+                        top: -50%;
+                        left: -5%;
+                        border-radius: 50%;
+                        opacity: 0.45;
+                        z-index: 1;
+                    }
+                }
+
+                li {
+                    margin: 0 15px;
+                    
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        padding-bottom: 5px;
+                        font-family: $main-font;
+                        position: relative;
+                        z-index: 5;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        .actions {
+            display: flex;
+            align-items: center;
+
+            a {
+                text-decoration: none;;
+                margin-left: 20px; 
+                background-color: $brun;
+                color: $blanc;
+                font-weight: 400;
+                font-family: $main-font;
+                padding: 10px 25px;
+                border: none;
+                border-radius: 3px;
+            }
+        }
+    }
+
+    main {
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            width: 50%;
+            h1 {
+
+                span {
+                    color: $brun;
+                    font-family: $main-font;
+                }
+            }
+
+            p {
+                margin-top: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                background-color: transparent;
+                color: $blanc;
+                font-weight: 400;
+                font-family: $main-font;
+                border: none;
+                border-radius: 3px;
+                display: flex;
+                width: fit-content;
+                color: $brun;
+                align-items: center;
+                margin-top: 10px;
+
+                svg {
+                    stroke: $brun;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .right {
+            width: 50%;
+
+            .news-container {
+                margin-top: 30px;
+                overflow: auto;
+
+                .news {
+                    h3 {
+                        color: $brun;
+                        margin-bottom: 10px;
+                    }
+
+                    h4 {
+                        text-transform: uppercase;
+                        font-family: $secondary-font;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        width: 50%;
+                        font-weight: 400;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    .content-container {
+        width: 80%;
+        text-align: center;
+
+        form {
+
+            input[type="text"] {
+                border: none;
+                pointer-events: none;
+                display: block;
+                text-align: center;
+                width: fit-content;
+                margin: 5px auto;
+            }
+        
+            input[name="result-name"] {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+    
+            input[name="result-rarity"] {
+                font-size: 0.9em;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+
+    .profil {
+        flex-direction: column;
+
+        .loot-container {
+            margin-top: 50px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            place-items: center;
+            gap: 50px;
+
+            .looted-card {
+                background-color: $beige;
+                width: 100%;
+                border-right: 5px solid $brun;
+                border-bottom: 5px solid $brun;
+                border-radius: 15px;
+                overflow: hidden;
+
+                .card-image {
+                    width: 100%;
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .card-infos {
+                    padding: 12px 18px;
+                    h4 {
+                        color: $brun;
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+
+
+}
+
+.accueil {
+    background-image: url('../img/accueil-bg.png');
+    background-size: cover;
+    background-position: 100% 100%;
+}

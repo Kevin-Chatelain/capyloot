@@ -1,0 +1,59 @@
+@import './properties.scss';
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blanc;
+    background-image: url('../img/capy-index-bg.png');
+    background-size: cover;
+    background-position: 100% 100%;
+
+    .global-container {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: fit-content;
+            background-color: $beige;
+            padding: 25px 40px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-right: 5px solid $brun;
+            border-bottom: 5px solid $brun;
+    
+            h1 {
+                text-align: center;
+            }
+    
+            form {
+                margin-top: 15px;
+
+                input {
+                    display: block;
+                    border: none;
+                    width: 100%;
+                    padding: 10px;
+                    margin: 10px 0;
+                    border-radius: 5px;
+                }
+
+                button {
+                    background-color: $brun;
+                    color: $blanc;
+                    font-weight: 400;
+                    font-family: $main-font;
+                    padding: 10px 25px;
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+            
+        }
+    }
+
+    
+}
