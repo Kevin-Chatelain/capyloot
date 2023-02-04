@@ -168,6 +168,9 @@ body main .right .news-container {
   margin-top: 30px;
   overflow: auto;
 }
+body main .right .news-container .news {
+  margin-bottom: 50px;
+}
 body main .right .news-container .news h3 {
   color: #85756E;
   margin-bottom: 10px;
@@ -181,11 +184,54 @@ body main .right .news-container .news p {
   width: 50%;
   font-weight: 400;
 }
-body .content-container {
+body .invocations {
+  flex-direction: column;
+  text-align: center;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+body .invocations .invocated-pannel {
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  display: none;
+}
+body .invocations .invocated-pannel .invocation-card-container {
+  margin: 100px auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #dfd9ce;
+  border-right: 10px solid #85756E;
+  border-bottom: 10px solid #85756E;
+  border-radius: 15px;
+  overflow: hidden;
+  transform-origin: center;
+  -webkit-animation: 1s ease-in card-reveal forwards;
+          animation: 1s ease-in card-reveal forwards;
+}
+body .invocations .invocated-pannel .invocation-card-container .card-infos {
+  padding: 20px;
+}
+body .invocations .invocated-pannel .close-pannel {
+  text-decoration: none;
+  margin-left: 20px;
+  background-color: #85756E;
+  color: #f3f3f3;
+  font-weight: 400;
+  font-family: "Unbounded", cursive;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 3px;
+}
+body .invocations .content-container {
   width: 80%;
   text-align: center;
+  margin-top: 50px;
 }
-body .content-container form input[type=text] {
+body .invocations .content-container form input[type=text] {
   border: none;
   pointer-events: none;
   display: block;
@@ -195,13 +241,25 @@ body .content-container form input[type=text] {
   width: fit-content;
   margin: 5px auto;
 }
-body .content-container form input[name=result-name] {
+body .invocations .content-container form input[name=result-name] {
   font-size: 1.2em;
   font-weight: bold;
 }
-body .content-container form input[name=result-rarity] {
+body .invocations .content-container form input[name=result-rarity] {
   font-size: 0.9em;
   text-transform: uppercase;
+}
+body .invocations .content-container form input[type=submit] {
+  background-color: #85756E;
+  color: #f3f3f3;
+  font-weight: 600;
+  font-family: "Unbounded", cursive;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 3px;
+  font-size: 50px;
+  letter-spacing: 0.5px;
 }
 body .profil {
   flex-direction: column;
@@ -240,4 +298,36 @@ body .profil .loot-container .looted-card .card-infos h4 {
   background-image: url("../img/accueil-bg.png");
   background-size: cover;
   background-position: 100% 100%;
+}
+
+.visible {
+  display: block !important;
+}
+
+@-webkit-keyframes card-reveal {
+  0% {
+    opacity: 0;
+    filter: brightness(0);
+  }
+  75% {
+    opacity: 1;
+    filter: brightness(0);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes card-reveal {
+  0% {
+    opacity: 0;
+    filter: brightness(0);
+  }
+  75% {
+    opacity: 1;
+    filter: brightness(0);
+  }
+  100% {
+    filter: brightness(1);
+  }
 }/*# sourceMappingURL=dashboard.css.map */

@@ -47,9 +47,17 @@ function loot() {
             document.querySelector('.result-rarity').value = lootedRank;
             document.querySelector('.result-image').value = data.capydata[0][lootedRank][randomInRank].image;
 
+            document.querySelector('.invocation-card-container>.card-infos>h3').innerText = data.capydata[0][lootedRank][randomInRank].name;
+            document.querySelector('.invocation-card-container>.card-infos>h4').innerText = lootedRank;
+            document.querySelector('.invocation-card-container>.card-image>img').setAttribute("src", "../img/"+data.capydata[0][lootedRank][randomInRank].image+".webp");
+
             for(let i = 0; i < starsNumber[lootedRank]; i++) {
                 document.querySelector('.result-stars').innerHTML += `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" stroke="none" fill="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
             }
+
+            /* GESTION DE L'ANIMATION */
+
+            document.querySelector(".invocated-pannel").classList.toggle('visible');
 
             let dataName = data.capydata[0][lootedRank][randomInRank].name;
             let dataRank = lootedRank;
@@ -63,3 +71,6 @@ function loot() {
         });
 }
 
+document.querySelector('.close-pannel').addEventListener('click', () => {
+    document.querySelector('.invocated-pannel').classList.toggle('visible');
+});

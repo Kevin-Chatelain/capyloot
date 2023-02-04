@@ -26,6 +26,7 @@ body {
 
                 .current-page {
                     position: relative;
+
                     &::before {
                         content: "";
                         width: 30px;
@@ -42,7 +43,7 @@ body {
 
                 li {
                     margin: 0 15px;
-                    
+
                     a {
                         text-decoration: none;
                         color: black;
@@ -61,8 +62,9 @@ body {
             align-items: center;
 
             a {
-                text-decoration: none;;
-                margin-left: 20px; 
+                text-decoration: none;
+                ;
+                margin-left: 20px;
                 background-color: $brun;
                 color: $blanc;
                 font-weight: 400;
@@ -81,6 +83,7 @@ body {
 
         .left {
             width: 50%;
+
             h1 {
 
                 span {
@@ -122,6 +125,7 @@ body {
                 overflow: auto;
 
                 .news {
+                    margin-bottom: 50px;
                     h3 {
                         color: $brun;
                         margin-bottom: 10px;
@@ -137,35 +141,93 @@ body {
                         width: 50%;
                         font-weight: 400;
                     }
-                    
+
                 }
             }
         }
     }
 
-    .content-container {
-        width: 80%;
+    .invocations {
+        flex-direction: column;
         text-align: center;
+        height: 70vh;
+        align-items: center;
+        justify-content: center;
 
-        form {
+        .invocated-pannel {
+            position: fixed;
+            inset: 0 0 0 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            display: none;
 
-            input[type="text"] {
-                border: none;
-                pointer-events: none;
-                display: block;
-                text-align: center;
+            .invocation-card-container {
+                margin: 100px auto;
                 width: fit-content;
-                margin: 5px auto;
+                background-color: $beige;
+                border-right: 10px solid $brun;
+                border-bottom: 10px solid $brun;
+                border-radius: 15px;
+                overflow: hidden;
+                transform-origin: center;
+                animation: 1s ease-in card-reveal forwards;
+
+                .card-infos {
+                    padding: 20px;
+                }
             }
-        
-            input[name="result-name"] {
-                font-size: 1.2em;
-                font-weight: bold;
+
+            .close-pannel {
+                text-decoration: none;
+                margin-left: 20px;
+                background-color: #85756E;
+                color: #f3f3f3;
+                font-weight: 400;
+                font-family: "Unbounded", cursive;
+                padding: 10px 25px;
+                border: none;
+                border-radius: 3px;
             }
-    
-            input[name="result-rarity"] {
-                font-size: 0.9em;
-                text-transform: uppercase;
+
+        }
+
+        .content-container {
+            width: 80%;
+            text-align: center;
+            margin-top: 50px;
+
+            form {
+                input[type="text"] {
+                    border: none;
+                    pointer-events: none;
+                    display: block;
+                    text-align: center;
+                    width: fit-content;
+                    margin: 5px auto;
+                }
+
+                input[name="result-name"] {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
+
+                input[name="result-rarity"] {
+                    font-size: 0.9em;
+                    text-transform: uppercase;
+                }
+
+                input[type="submit"] {
+                    background-color: $brun;
+                    color: $blanc;
+                    font-weight: 600;
+                    font-family: $main-font;
+                    text-transform: uppercase;
+                    padding: 10px 25px;
+                    border: none;
+                    border-radius: 3px;
+                    font-size: 50px;
+                    letter-spacing: 0.5px;
+                }
             }
         }
     }
@@ -192,6 +254,7 @@ body {
 
                 .card-image {
                     width: 100%;
+
                     img {
                         max-width: 100%;
                         height: auto;
@@ -200,12 +263,13 @@ body {
 
                 .card-infos {
                     padding: 12px 18px;
+
                     h4 {
                         color: $brun;
                     }
                 }
 
-                
+
             }
         }
     }
@@ -218,4 +282,24 @@ body {
     background-image: url('../img/accueil-bg.png');
     background-size: cover;
     background-position: 100% 100%;
+}
+
+.visible {
+    display: block !important;
+}
+
+@keyframes card-reveal {
+    0% {
+        opacity: 0;
+        filter: brightness(0);
+    }
+
+    75% {
+        opacity: 1;
+        filter: brightness(0);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
 }
